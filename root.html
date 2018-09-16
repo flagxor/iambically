@@ -1,0 +1,126 @@
+<html>
+  <head>
+    <title>Iambically</title>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="manifest" href="/static/manifest.json">
+
+    <link rel="stylesheet" type="text/css" href="/static/iambically.css">
+
+    <link href="/static/favicon16.png" type="image/x-icon" rel="shortcut icon">
+    <link href="/static/favicon16.png" type="image/x-icon" rel="icon">
+    <link href="/static/favicon256.png" type="image/x-icon" rel="shortcut icon">
+    <link href="/static/favicon256.png" type="image/x-icon" rel="icon">
+    <link href="/static/favicon512.png" type="image/x-icon" rel="shortcut icon">
+    <link href="/static/favicon512.png" type="image/x-icon" rel="icon">
+    <link href="/static/favicon1024.png" type="image/x-icon" rel="shortcut icon">
+    <link href="/static/favicon1024.png" type="image/x-icon" rel="icon">
+    <link href="/static/favicon16.png" rel="apple-touch-icon" sizes="16x16">
+    <link href="/static/favicon32.png" rel="apple-touch-icon" sizes="32x32">
+    <link href="/static/favicon57.png" rel="apple-touch-icon" sizes="57x57">
+    <link href="/static/favicon128.png" rel="apple-touch-icon" sizes="128x128">
+    <link href="/static/favicon160.png" rel="apple-touch-icon" sizes="160x160">
+    <link href="/static/favicon192.png" rel="apple-touch-icon" sizes="192x192">
+    <link href="/static/favicon256.png" rel="apple-touch-icon" sizes="256x256">
+    <link href="/static/favicon512.png" rel="apple-touch-icon" sizes="512x512">
+    <link href="/static/favicon1024.png" rel="apple-touch-icon" sizes="1024x1024">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style"
+          content="black-translucent">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, user-scalable=no">
+  </head>
+  <body>
+    <script src="/static/sleep.js"></script>
+    <script src="/static/corewords.js"></script>
+    <script src="/static/promiseforth.js"></script>
+    <script src="/static/http.js"></script>
+    <script src="/static/format.js"></script>
+    <script src="/static/sweep.js"></script>
+    <script src="/static/entry.js"></script>
+    <script src="/static/surface.js"></script>
+    <script src="/static/brush.js"></script>
+    <script src="/static/drawing.js"></script>
+    <script src="/static/location.js"></script>
+    <script src="/static/panels.js"></script>
+    <script src="/static/datastore.js"></script>
+    <script src="/static/sync.js"></script>
+    <script src="/static/iambically.js"></script>
+    <div class="nav">
+      <div class="bar">
+        <span id="cancel" class="cell clickable editing">&#x274c;</span>
+        <span class="cell editing">&nbsp;</span>
+        <div class="palette editing">
+          <div class="palette_row">
+            <span id="brush00" class="cell clickable"
+              style="color: #000">&#x25cf;</span>
+            <span id="brush01" class="cell clickable"
+              style="color: #fff">&#x25cf;</span>
+            <span id="brush02" class="cell clickable"
+              style="color: #f44">&#x2b24;</span>
+            <span id="brush03" class="cell clickable"
+              style="color: #ff4">&#x2b24;</span>
+            <span id="brush04" class="cell clickable"
+              style="color: #44f">&#x2b24;</span>
+            <span id="brush05"
+              class="cell clickable" style="color: #000">&#x1f446;</span>
+          </div>
+          <div class="palette_row">
+            <span id="brush10" class="cell clickable"
+              style="color: #000">&#x25cf;</span>
+            <span id="brush11" class="cell clickable"
+              style="color: #fff">&#x25cf;</span>
+            <span id="brush12" class="cell clickable"
+              style="color: #f80">&#x2b24;</span>
+            <span id="brush13" class="cell clickable"
+              style="color: #0f0">&#x2b24;</span>
+            <span id="brush14" class="cell clickable"
+              style="color: #808">&#x2b24;</span>
+            <span id="brush15"
+              class="cell clickable" style="color: #000">&#x1f446;</span>
+          </div>
+          <div class="palette_row">
+            <span id="brush20" class="cell clickable"
+              style="color: #000">&#x25cf;</span>
+            <span id="brush21" class="cell clickable"
+              style="color: #fff">&#x25cf;</span>
+            <span id="brush22" class="cell clickable"
+              style="color: #000">&#x2b24;</span>
+            <span id="brush23" class="cell clickable"
+              style="color: #333">&#x2b24;</span>
+            <span id="brush24" class="cell clickable"
+              style="color: #fff">&#x2b24;</span>
+            <span id="brush25"
+             class="cell clickable" style="color: #000">&#x1f446;</span>
+          </div>
+        </div>
+        <span class="cell full">
+          <input class="full viewing"
+           id="query" type="text" width="40" placeholder="&#9906;">
+        </span>
+        <span id="sync" class="cell clickable viewing"></span>
+        <span class="cell">
+          <img class="clickable middle"
+               id="iambic"
+               src="/static/favicon256.png">
+        </span>
+      </div>
+    </div>
+    <div id="paint_area">
+      <canvas id="canvas"></canvas>
+      <canvas id="backcanvas"
+        width="512" height="512" style="display: none"></canvas>
+    </div>
+    <div id="edit" class="editing article">
+      <div class="entry">
+        <textarea id="edit_area"></textarea>
+      </div>
+    </div>
+    <div id="alerts" class="article viewing"></div>
+    <div id="entries" class="article viewing"></div>
+    <div style="height: 100px; text-align: center;">END</div>
+  </body>
+</html>
