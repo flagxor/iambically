@@ -1,4 +1,6 @@
-runtime: go112
+runtime: python27
+api_version: 1
+threadsafe: true
 
 default_expiration: "1m"
 
@@ -15,5 +17,11 @@ handlers:
   static_dir: static
   secure: always
 - url: /.*
-  script: auto
+  script: iambically.app
   secure: always
+
+libraries:
+- name: webapp2
+  version: latest
+- name: jinja2
+  version: latest
